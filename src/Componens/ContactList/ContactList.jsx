@@ -1,10 +1,15 @@
+import Contact from "../Contact/Contact";
 
-export default function ContactList{
-    return (
-        <ul>
-            {tasks.map((task) => (
-                <li key={task.id}></li>
-            ))}
-        </ ul >
-   )
+export default function ContactList({ frends, onDelete }) {
+  // console.log(frends);
+  return (
+    <ul>
+      {frends.map((frend) => (
+        <li key={frend.id}>
+          <Contact contactFrend={frend} />
+        </li>
+      ))}
+    </ul>
+  );
 }
+// console.log(frend.id);
